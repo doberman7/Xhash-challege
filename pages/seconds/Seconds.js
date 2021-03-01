@@ -29,7 +29,17 @@ const Seconds = () => {
         style={{ width: 60 }}
       >
         {children}
-      </Select>
+      </Select>{" "}
+      second(s) starting at second
+      <Select
+        size="small"
+        defaultValue="0"
+        onChange={handleChange}
+        style={{ width: 60 }}
+      >
+        {children}
+      </Select>{" "}
+      <Divider />
       <br />
       <div className={styles.backToHome}>
         <Link href="/">
