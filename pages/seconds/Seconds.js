@@ -1,6 +1,6 @@
 import { Select, Radio, Divider } from "antd";
 import styles from "./seconds.module.css";
-
+import "antd/dist/antd.css";
 import Link from "next/link";
 
 const { Option } = Select;
@@ -16,6 +16,7 @@ const Seconds = () => {
 
   return (
     <>
+      <div className={styles.header}>Seconds</div>
       Every second
       <Radio defaultChecked={true} />
       <Divider />
