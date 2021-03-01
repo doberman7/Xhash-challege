@@ -6,6 +6,7 @@ import Link from "next/link";
 const { Option } = Select;
 const Seconds = () => {
   const children = [];
+  // funtion for the 60 secs on select
   for (let i = 1; i < 61; i++) {
     children.push(<Option key={i}>{i}</Option>);
   }
@@ -20,12 +21,12 @@ const Seconds = () => {
       Every second
       <Radio defaultChecked={true} />
       <Divider />
-      Every
+      Every{" "}
       <Select
         size="small"
         defaultValue="1"
         onChange={handleChange}
-        style={{ width: 200 }}
+        style={{ width: 60 }}
       >
         {children}
       </Select>
