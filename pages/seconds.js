@@ -1,6 +1,4 @@
 import { Select, Radio, Divider } from "antd";
-// import styles from "../styles/Home.module.css";
-import Link from "next/link";
 
 const { Option } = Select;
 const Seconds = () => {
@@ -28,11 +26,6 @@ const Seconds = () => {
         {children}
       </Select>
       <br />
-      <div>
-        <Link href="/">
-          <a>← Back to home</a>
-        </Link>
-      </div>
     </>
   );
 };
