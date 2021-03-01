@@ -14,33 +14,35 @@ export default function Home() {
         <h1 className={styles.title}>Title</h1>
 
         <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+          Xhash Challenge
+          <code className={styles.code}>made by Ivan Rubio</code>
         </p>
 
         <div className={styles.grid}>
           <Link href="/seconds/Seconds">
             <a className={styles.card}>
-              <h3>Documentation &rarr;</h3>
+              <h3>Seconds &rarr;</h3>
             </a>
           </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-          </a>
+          <Link href="/minutes/Minutes">
+            <a className={styles.card}>
+              <h3>Minutes &rarr;</h3>
+            </a>
+          </Link>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h3>Examples &rarr;</h3>
+            <h3>Hours &rarr;</h3>
           </a>
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Day &rarr;</h3>
           </a>
         </div>
       </main>
