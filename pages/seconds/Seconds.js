@@ -33,8 +33,16 @@ const Seconds = () => {
       {/* Every second
       <Radio defaultChecked={true} /> */}
       <Divider />
-      <Form>
-        <Form.Item label="Starting" name="Starting" {...tailLayout}>
+      <Form
+        {...layout}
+        name="basic"
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
+      >
+        <Form.Item label="Starting" name="Starting">
           <Starting />
         </Form.Item>
         <Form.Item {...tailLayout}>
