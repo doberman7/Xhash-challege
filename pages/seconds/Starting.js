@@ -22,7 +22,7 @@ const Starting = () => {
       <Form.Item name="category" label="category:">
         <Select
           size="small"
-          defaultValue="1"
+          // defaultValue="1"
           onChange={handleChange}
           style={{ width: 60 }}
         >
