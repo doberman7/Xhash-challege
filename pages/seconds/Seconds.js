@@ -9,16 +9,18 @@ import { Form, Input, Button, Checkbox } from "antd";
 const Seconds = () => {
   const layout = {
     labelCol: {
-      span: 8,
+      // span: 8,
+      span: 11,
     },
     wrapperCol: {
-      span: 16,
+      // span: 16,
     },
   };
   const tailLayout = {
     wrapperCol: {
-      offset: 8,
-      span: 16,
+      // offset: 8,
+      offset: 11,
+      // span: 26,
     },
   };
   const onFinish = (values) => {
@@ -30,7 +32,9 @@ const Seconds = () => {
   };
   return (
     <>
-      <div className={styles.header}>Seconds</div>
+      <div className={styles.header}>
+        <h1>Seconds</h1>
+      </div>
       {/* Every second
       <Radio defaultChecked={true} /> */}
       <Divider />
