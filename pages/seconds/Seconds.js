@@ -42,9 +42,8 @@ const Seconds = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <Form.Item label="Starting">
-          <Starting />
-        </Form.Item>
+        <Starting />
+
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
             Submit
