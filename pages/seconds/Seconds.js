@@ -3,6 +3,7 @@ import styles from "./seconds.module.css";
 import "antd/dist/antd.css";
 import Link from "next/link";
 import Every from "./Every";
+import StartingAt from "./StartingAt";
 import { Form, Input, Button, Checkbox } from "antd";
 
 const Seconds = () => {
@@ -43,7 +44,7 @@ const Seconds = () => {
         onFinishFailed={onFinishFailed}
       >
         <Every />
-
+        <StartingAt />
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
             Submit
