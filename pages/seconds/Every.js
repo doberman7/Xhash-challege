@@ -7,7 +7,7 @@ const Every = () => {
   for (let i = 1; i < 61; i++) {
     children.push(
       <Select.Option key={i} value={i}>
-        {i}
+        {i} seconds
       </Select.Option>
     );
   }
@@ -23,7 +23,7 @@ const Every = () => {
           size="small"
           // defaultValue="1"
           onChange={handleChange}
-          style={{ width: 60 }}
+          style={{ width: 120 }}
         >
           {children}
         </Select>
