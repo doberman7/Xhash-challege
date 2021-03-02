@@ -42,7 +42,7 @@ const Seconds = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <Form.Item label="Starting" name="Starting">
+        <Form.Item label="Starting">
           <Starting />
         </Form.Item>
         <Form.Item {...tailLayout}>
