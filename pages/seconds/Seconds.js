@@ -2,7 +2,7 @@ import { Select, Radio, Divider } from "antd";
 import styles from "./seconds.module.css";
 import "antd/dist/antd.css";
 import Link from "next/link";
-import Starting from "./Starting";
+import Every from "./Every";
 import { Form, Input, Button, Checkbox } from "antd";
 
 const Seconds = () => {
@@ -42,7 +42,7 @@ const Seconds = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <Starting />
+        <Every />
 
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
