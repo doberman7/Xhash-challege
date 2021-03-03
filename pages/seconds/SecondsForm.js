@@ -1,12 +1,12 @@
-import { Select, Radio, Divider } from "antd";
+import { Divider } from "antd";
 import styles from "./seconds.module.css";
 import "antd/dist/antd.css";
 import Link from "next/link";
-import Every from "./Every";
-import StartingAt from "./StartingAt";
-import { Form, Input, Button, Checkbox } from "antd";
-
-const Seconds = () => {
+import EverySecStartingAt from "./EverySecStartingAt";
+import SpecificSecond from "./SpecificSecond";
+import EverySecond from "./EverySecond";
+import { Form, Button } from "antd";
+const SecondsForm = () => {
   const layout = {
     labelCol: {
       // span: 8,
@@ -47,8 +47,12 @@ const Seconds = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <Every />
-        <StartingAt />
+        <EverySecond />
+        <Divider />
+        <EverySecStartingAt />
+        <Divider />
+        <SpecificSecond />
+
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
             Submit
@@ -66,4 +70,4 @@ const Seconds = () => {
   );
 };
 
-export default Seconds;
+export default SecondsForm;
