@@ -3,9 +3,17 @@ import { Radio, Form } from "antd";
 const SpecificSecond = () => {
   return (
     <>
-      <Form.Item>
-        <Radio>Specifiq second (chose one or many)</Radio>
-      </Form.Item>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Form.Item>
+          <p>Specifiq second (chose one or many)</p>
+        </Form.Item>
+      </div>
     </>
   );
 };

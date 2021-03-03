@@ -1,10 +1,9 @@
-import { Divider } from "antd";
+import { Divider, Radio } from "antd";
 import styles from "./seconds.module.css";
 import "antd/dist/antd.css";
 import Link from "next/link";
 import EverySecStartingAt from "./EverySecStartingAt";
 import SpecificSecond from "./SpecificSecond";
-import EverySecond from "./EverySecond";
 import { Form, Button } from "antd";
 const SecondsForm = () => {
   const layout = {
@@ -47,12 +46,20 @@ const SecondsForm = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <EverySecond />
-        <Divider />
-        <EverySecStartingAt />
-        <Divider />
-        <SpecificSecond />
+        <Radio.Group name="radiogroup" defaultValue={1}>
+          <Radio value={1}>Every Second</Radio>
+          <Divider />
+          <Radio value={2}>
+            <EverySecStartingAt />
+          </Radio>
 
+          <Divider />
+
+          <Radio value={3}>
+            <SpecificSecond />
+          </Radio>
+          <Divider />
+        </Radio.Group>
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
             Submit
