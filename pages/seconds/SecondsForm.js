@@ -29,6 +29,15 @@ const SecondsForm = () => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+  const radioStyle = {
+    // display: "block",
+    // height: "30%",
+  };
+
+  const parentRadio = {
+    width: "100%",
+  };
+
   return (
     <>
       <div className={styles.header}>
@@ -46,16 +55,18 @@ const SecondsForm = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <Radio.Group name="radiogroup" defaultValue={1}>
-          <Radio value={1}>Every Second</Radio>
+        <Radio.Group name="radiogroup" style={parentRadio}>
+          <Radio value={1} style={radioStyle}>
+            Every Second
+          </Radio>
           <Divider />
-          <Radio value={2}>
+          <Radio value={2} style={radioStyle}>
             <EverySecStartingAt />
           </Radio>
 
           <Divider />
 
-          <Radio value={3}>
+          <Radio value={3} style={radioStyle}>
             <SpecificSecond />
           </Radio>
           <Divider />
