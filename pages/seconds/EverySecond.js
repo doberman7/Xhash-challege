@@ -10,7 +10,9 @@ const EverySecond = () => {
           width: "auto",
         }}
       >
-        <Form.Item name="Every-Second">Every Second</Form.Item>
+        <Form.Item name="Every-Second" initialValue="every-second">
+          Every Second
+        </Form.Item>
       </div>
     </>
   );

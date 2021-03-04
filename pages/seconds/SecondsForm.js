@@ -21,10 +21,6 @@ const SecondsForm = () => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-  const radioStyle = {
-    display: "inline-block",
-    width: "auto",
-  };
 
   const parentRadio = {
     width: "100%",
@@ -48,7 +44,7 @@ const SecondsForm = () => {
         onFinishFailed={onFinishFailed}
       >
         <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
-          <Radio value={1} style={radioStyle} valuePropName="checked">
+          <Radio value={1} valuePropName="checked">
             <EverySecond />
           </Radio>
           <Divider />
@@ -58,7 +54,7 @@ const SecondsForm = () => {
 
           <Divider />
 
-          <Radio value={3} style={radioStyle}>
+          <Radio value={3}>
             <SpecificSecond />
           </Radio>
           <Divider />
