@@ -6,12 +6,15 @@ import EverySecStartingAt from "./EverySecStartingAt";
 import SpecificSecond from "./SpecificSecond";
 import EverySecond from "./EverySecond";
 import { Form, Button } from "antd";
+import { useState } from "react";
 
 const SecondsForm = () => {
+  const [selected, setSelected] = useState(null);
   const onChange = (e) => {
-    console.log("radio checked", e.target.value);
+    setSelected(e.target.value);
   };
   const onFinish = (values) => {
+    console.log("radio checked", selected);
     console.log("Success:", values);
   };
 
