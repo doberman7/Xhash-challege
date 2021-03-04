@@ -1,7 +1,10 @@
-import { Select, Form } from "antd";
+import { Select, Form, Button } from "antd";
 import "antd/dist/antd.css";
 
 const StartingAt = () => {
+  function handleChange(value) {
+    console.log(`Selected: ${value}`);
+  }
   const children = [];
   // funtion for the 60 secs on select
   for (let i = 0; i < 61; i++) {
@@ -10,10 +13,6 @@ const StartingAt = () => {
         {i} seconds
       </Select.Option>
     );
-  }
-
-  function handleChange(value) {
-    console.log(`Selected: ${value}`);
   }
 
   return (
