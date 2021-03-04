@@ -6,22 +6,22 @@ import EverySecStartingAt from "./EverySecStartingAt";
 import SpecificSecond from "./SpecificSecond";
 import { Form, Button } from "antd";
 const SecondsForm = () => {
-  const layout = {
-    labelCol: {
-      // span: 8,
-      span: 11,
-    },
-    wrapperCol: {
-      // span: 16,
-    },
-  };
-  const tailLayout = {
-    wrapperCol: {
-      // offset: 8,
-      offset: 11,
-      // span: 26,
-    },
-  };
+  // const layout = {
+  //   labelCol: {
+  //     // span: 8,
+  //     span: 11,
+  //   },
+  //   wrapperCol: {
+  //     // span: 16,
+  //   },
+  // };
+  // const tailLayout = {
+  //   wrapperCol: {
+  //     // offset: 8,
+  //     offset: 11,
+  //     // span: 26,
+  //   },
+  // };
   const onFinish = (values) => {
     console.log("Success:", values);
   };
@@ -38,7 +38,7 @@ const SecondsForm = () => {
       <Radio defaultChecked={true} /> */}
       <Divider />
       <Form
-        {...layout}
+        // {...layout}
         name="basic"
         initialValues={{
           remember: true,
@@ -60,10 +60,18 @@ const SecondsForm = () => {
           </Radio>
           <Divider />
         </Radio.Group>
-        <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
+        <Form.Item>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Button type="primary" htmlType="submit">
+              Submit
+            </Button>
+          </div>
         </Form.Item>
       </Form>
       <Divider />
