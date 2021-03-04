@@ -4,24 +4,13 @@ import "antd/dist/antd.css";
 import Link from "next/link";
 import EverySecStartingAt from "./EverySecStartingAt";
 import SpecificSecond from "./SpecificSecond";
+import EverySecond from "./EverySecond";
 import { Form, Button } from "antd";
+
 const SecondsForm = () => {
-  // const layout = {
-  //   labelCol: {
-  //     // span: 8,
-  //     span: 11,
-  //   },
-  //   wrapperCol: {
-  //     // span: 16,
-  //   },
-  // };
-  // const tailLayout = {
-  //   wrapperCol: {
-  //     // offset: 8,
-  //     offset: 11,
-  //     // span: 26,
-  //   },
-  // };
+  const onChange = (e) => {
+    console.log("radio checked", e.target.value);
+  };
   const onFinish = (values) => {
     console.log("Success:", values);
   };
@@ -30,8 +19,8 @@ const SecondsForm = () => {
     console.log("Failed:", errorInfo);
   };
   const radioStyle = {
-    // display: "block",
-    // height: "30%",
+    display: "inline-block",
+    width: "auto",
   };
 
   const parentRadio = {
@@ -55,12 +44,12 @@ const SecondsForm = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <Radio.Group name="radiogroup" style={parentRadio}>
-          <Radio value={1} style={radioStyle}>
-            Every Second
+        <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
+          <Radio value={1} style={radioStyle} valuePropName="checked">
+            <EverySecond />
           </Radio>
           <Divider />
-          <Radio value={2} style={radioStyle}>
+          <Radio value={2}>
             <EverySecStartingAt />
           </Radio>
 

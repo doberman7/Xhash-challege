@@ -1,15 +1,19 @@
-import { Radio, Form } from "antd";
+import { Form } from "antd";
 import "antd/dist/antd.css";
 
-const Every = (checked) => {
-  checked = true;
+const EverySecond = () => {
   return (
     <>
-      <Form.Item name="EverySecond" label="Every sec">
-        <Radio value={1}>Every Second</Radio>
-      </Form.Item>
+      <div
+        style={{
+          display: "inline-block",
+          width: "auto",
+        }}
+      >
+        <Form.Item name="Every-Second">Every Second</Form.Item>
+      </div>
     </>
   );
 };
 
-export default Every;
+export default EverySecond;

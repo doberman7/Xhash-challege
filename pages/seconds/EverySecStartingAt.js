@@ -4,7 +4,15 @@ import StartingAt from "./StartingAt";
 const EverySecStartingAt = () => {
   return (
     <>
-      <Every />
+      <div
+        style={{
+          display: "inline-block",
+          width: "auto",
+        }}
+      >
+        {" "}
+        <Every />
+      </div>
       <StartingAt />
     </>
   );
