@@ -1,4 +1,17 @@
 import { Form, Button } from "antd";
+import { Checkbox } from "antd";
+
+function onChange(checkedValues) {
+  console.log("checked = ", checkedValues);
+}
+
+const plainOptions = [];
+let minute = 0;
+while (minute < 60) {
+  minute++;
+  const obj = { label: `${minute}`, value: minute };
+  plainOptions.push(obj);
+}
 
 const SpecificSecond = () => {
   const onFinish = (values) => {
@@ -28,7 +41,14 @@ const SpecificSecond = () => {
         >
           <Form.Item>
             <p>Specifiq second (chose one or many)</p>
+            <Checkbox.Group
+              options={plainOptions}
+              defaultValue={["Apple"]}
+              onChange={onChange}
+            />
+            <br />
           </Form.Item>
+
           <Form.Item>
             <div
               style={{
