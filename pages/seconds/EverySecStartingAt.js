@@ -16,12 +16,6 @@ const EverySecStartingAt = () => {
   }
   return (
     <>
-      {/* <div
-        style={{
-          display: "inline-block",
-          width: "auto",
-        }}
-      > */}{" "}
       <Form
         // {...layout}
         name="basic"
@@ -31,23 +25,31 @@ const EverySecStartingAt = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        <Every />
-        <StartingAt />
-        <Form.Item>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Every />
+          <StartingAt />
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Form.Item>
             <Button type="primary" htmlType="submit">
               Submit
             </Button>
-          </div>
-        </Form.Item>
+          </Form.Item>
+        </div>
       </Form>
-      {/* </div> */}
     </>
   );
 };
