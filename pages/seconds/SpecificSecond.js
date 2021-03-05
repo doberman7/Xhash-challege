@@ -6,8 +6,8 @@ function onChange(checkedValues) {
 }
 
 const plainOptions = [];
-let minute = 0;
-while (minute < 60) {
+let minute = -1;
+while (minute < 59) {
   minute++;
   const obj = { label: `${minute}`, value: minute };
   plainOptions.push(obj);
