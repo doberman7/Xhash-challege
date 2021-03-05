@@ -1,19 +1,41 @@
-import { Form } from "antd";
+import { Form, Button } from "antd";
 import "antd/dist/antd.css";
 
 const EverySecond = () => {
+  const onFinish = (values) => {
+    console.log("values", values);
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
   return (
     <>
-      <div
+      {/* <div
         style={{
           display: "inline-block",
           width: "auto",
         }}
+      > */}
+      <Form
+        // {...layout}
+        name="basic"
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed}
       >
         <Form.Item name="Every-Second" initialValue="every-second">
           Every Second
         </Form.Item>
-      </div>
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>
+      {/* </div> */}
     </>
   );
 };
