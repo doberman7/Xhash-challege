@@ -67,7 +67,6 @@ const SpecificSecond = () => {
           </Form.Item>
         </Form>
       </div>
-      <p>You clicked {minutos} times</p>
     </>
   );
 };
