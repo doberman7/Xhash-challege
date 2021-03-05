@@ -39,7 +39,7 @@ const SpecificSecond = () => {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <Form.Item>
+          <Form.Item name="specific-second" label="Specific second:">
             <p>Specifiq second (chose one or many)</p>
             <Checkbox.Group
               options={plainOptions}
