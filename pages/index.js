@@ -19,7 +19,7 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/seconds/SecondsForm">
+          <Link href="/seconds/SecondsPeriodicidad">
             <a className={styles.card}>
               <h3>Seconds &rarr;</h3>
             </a>

@@ -9,7 +9,7 @@ import EverySecBetweenSecAndSec from "./EverySecBetweenSecAndSec";
 import React, { useState, useEffect } from "react";
 import { Modal, Button } from "antd";
 
-const SecondsForm = () => {
+const SecondsPeriodicidad = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [select, setSelect] = useState(null);
 
@@ -80,4 +80,4 @@ const SecondsForm = () => {
   );
 };
 
-export default SecondsForm;
+export default SecondsPeriodicidad;
