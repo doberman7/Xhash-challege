@@ -5,6 +5,7 @@ import Link from "next/link";
 import EverySecStartingAt from "./EverySecStartingAt";
 import SpecificSecond from "./SpecificSecond";
 import EverySecond from "./EverySecond";
+import EverySecBetweenSecAndSec from "./EverySecBetweenSecAndSec";
 import React, { useState, useEffect } from "react";
 import { Modal, Button } from "antd";
 
@@ -50,6 +51,7 @@ const SecondsForm = () => {
         {select === 1 ? <EverySecond /> : null}
         {select === 2 ? <EverySecStartingAt /> : null}
         {select === 3 ? <SpecificSecond /> : null}
+        {select === 4 ? <EverySecBetweenSecAndSec /> : null}
       </Modal>
 
       <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
@@ -63,6 +65,8 @@ const SecondsForm = () => {
         <Divider />
 
         <Radio value={3}>Specific second</Radio>
+        <Divider />
+        <Radio value={4}>Every second between second and second </Radio>
         <Divider />
       </Radio.Group>
       <Divider />
