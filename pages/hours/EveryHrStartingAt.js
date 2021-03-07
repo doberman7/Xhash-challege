@@ -3,7 +3,7 @@ import { Select, Form, Button } from "antd";
 
 import Every from "./Every";
 import StartingAt from "./StartingAt";
-const EverySecStartingAt = () => {
+const EveryHrStartingAt = () => {
   const onFinish = (values) => {
     console.log("values", values);
   };
@@ -11,9 +11,9 @@ const EverySecStartingAt = () => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-  function handleChange(value) {
-    console.log(`Selected: ${value}`);
-  }
+  // function handleChange(value) {
+  //   console.log(`Selected: ${value}`);
+  // }
   return (
     <>
       <Form
@@ -54,4 +54,4 @@ const EverySecStartingAt = () => {
   );
 };
 
-export default EverySecStartingAt;
+export default EveryHrStartingAt;

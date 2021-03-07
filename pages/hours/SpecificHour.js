@@ -1,24 +1,21 @@
 import { Form, Button } from "antd";
 import { Checkbox } from "antd";
-import React, { useState } from "react";
-let minutos = [];
+let horas = [];
 
-const SpecificSecond = () => {
-  // const [minutos, setminutos] = useState([]);
+const SpecificHour = () => {
   function onChange(checkedValues) {
-    minutos = checkedValues;
-    // console.log("minutos = ", minutos);
+    horas = checkedValues;
   }
 
   const plainOptions = [];
-  let minute = -1;
-  while (minute < 59) {
-    minute++;
-    const obj = { label: `${minute}`, value: minute };
+  let hour = -1;
+  while (hour < 59) {
+    hour++;
+    const obj = { label: `${hour}`, value: hour };
     plainOptions.push(obj);
   }
   const onFinish = (values) => {
-    console.log("radio checked", minutos);
+    console.log("horas", horas);
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -42,8 +39,8 @@ const SpecificSecond = () => {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <Form.Item name="specific-second">
-            <p>Specifiq second (chose one or many)</p>
+          <Form.Item name="specific-hour">
+            <p>Specifiq hour (chose one or many)</p>
             <Checkbox.Group
               options={plainOptions}
               defaultValue={["Apple"]}
@@ -71,4 +68,4 @@ const SpecificSecond = () => {
   );
 };
 
-export default SpecificSecond;
+export default SpecificHour;

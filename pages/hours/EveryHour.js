@@ -1,7 +1,7 @@
 import { Form, Button } from "antd";
 import "antd/dist/antd.css";
 
-const EverySecond = () => {
+const EveryHour = () => {
   const onFinish = (values) => {
     console.log("values", values);
   };
@@ -27,8 +27,8 @@ const EverySecond = () => {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <Form.Item name="Every-Second" initialValue="every-second">
-            Every Second
+          <Form.Item name="every-hour" initialValue="every-hour">
+            Every Hour
           </Form.Item>
           <Form.Item>
             <Button type="primary" htmlType="submit">
@@ -41,4 +41,4 @@ const EverySecond = () => {
   );
 };
 
-export default EverySecond;
+export default EveryHour;

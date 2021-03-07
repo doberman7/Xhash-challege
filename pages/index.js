@@ -31,12 +31,11 @@ export default function Home() {
             </a>
           </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Hours &rarr;</h3>
-          </a>
+          <Link href="/hours/HoursPeriodicidad">
+            <a className={styles.card}>
+              <h3>Hours &rarr;</h3>
+            </a>
+          </Link>
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

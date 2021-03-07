@@ -1,9 +1,9 @@
-import { Select, Form, Button } from "antd";
+import { Select, Form } from "antd";
 import "antd/dist/antd.css";
 
-const SecondA = () => {
+const HourA = () => {
   function handleChange(value) {
-    console.log(`Selected: ${value}`);
+    // console.log(`Selected: ${value}`);
   }
   const children = [];
   // funtion for the 60 secs on select
@@ -17,7 +17,7 @@ const SecondA = () => {
 
   return (
     <>
-      <Form.Item name="secondA" label="second:">
+      <Form.Item name="hourA" label="Hour:">
         <Select
           size="small"
           // defaultValue="1"
@@ -31,4 +31,4 @@ const SecondA = () => {
   );
 };
 
-export default SecondA;
+export default HourA;

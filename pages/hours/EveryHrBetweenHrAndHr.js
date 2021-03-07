@@ -1,9 +1,9 @@
 import "antd/dist/antd.css";
 import { Form, Button } from "antd";
 
-import SecondA from "./SecondA";
-import SecondB from "./SecondB";
-const EverySecBetweenSecAndSec = () => {
+import HourA from "./HourA";
+import HourB from "./HourB";
+const EveryHrBetweenHrAndHr = () => {
   const onFinish = (values) => {
     console.log("values", values);
   };
@@ -11,12 +11,12 @@ const EverySecBetweenSecAndSec = () => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-  function handleChange(value) {
-    console.log(`Selected: ${value}`);
-  }
+  // function handleChange(value) {
+  //   console.log(`Selected: ${value}`);
+  // }
   return (
     <>
-      <p>Every second between </p>
+      <p>Every hour between </p>
       <Form
         // {...layout}
         name="basic"
@@ -33,7 +33,7 @@ const EverySecBetweenSecAndSec = () => {
             alignItems: "center",
           }}
         >
-          <SecondA /> <SecondB />
+          <HourA /> <HourB />
         </div>
 
         <div
@@ -54,4 +54,4 @@ const EverySecBetweenSecAndSec = () => {
   );
 };
 
-export default EverySecBetweenSecAndSec;
+export default EveryHrBetweenHrAndHr;

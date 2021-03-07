@@ -7,23 +7,23 @@ const Every = () => {
   for (let i = 1; i < 61; i++) {
     children.push(
       <Select.Option key={i} value={i}>
-        {i} minutes
+        {i} hours
       </Select.Option>
     );
   }
 
   function handleChange(value) {
-    console.log(`Selected: ${value}`);
+    // console.log(`Selected: ${value}`);
   }
 
   return (
     <>
-      <Form.Item name="Every" label="Every:">
+      <Form.Item name="every-X-hour" label="Every:">
         <Select
           size="small"
           // defaultValue="1"
           onChange={handleChange}
-          style={{ width: 120 }}
+          // style={{ width: 120 }}
         >
           {children}
         </Select>

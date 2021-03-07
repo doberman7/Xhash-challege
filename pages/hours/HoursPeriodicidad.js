@@ -1,15 +1,15 @@
 import { Divider, Radio } from "antd";
-import styles from "./seconds.module.css";
+import styles from "./Hours.module.css";
 import "antd/dist/antd.css";
 import Link from "next/link";
-import EverySecStartingAt from "./EverySecStartingAt";
-import SpecificSecond from "./SpecificSecond";
-import EverySecond from "./EverySecond";
-import EverySecBetweenSecAndSec from "./EverySecBetweenSecAndSec";
-import React, { useState, useEffect } from "react";
-import { Modal, Button } from "antd";
+import EveryHrStartingAt from "./EveryHrStartingAt";
+import SpecificHour from "./SpecificHour";
+import EveryHour from "./EveryHour";
+import EveryHrBetweenHrAndHr from "./EveryHrBetweenHrAndHr";
+import { useState } from "react";
+import { Modal } from "antd";
 
-const SecondsPeriodicidad = () => {
+const HoursPeriodiocidad = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [select, setSelect] = useState(null);
 
@@ -38,7 +38,7 @@ const SecondsPeriodicidad = () => {
   return (
     <>
       <div className={styles.header}>
-        <h1>Seconds</h1>
+        <h1>Hours</h1>
       </div>
 
       <Divider />
@@ -48,25 +48,25 @@ const SecondsPeriodicidad = () => {
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        {select === 1 ? <EverySecond /> : null}
-        {select === 2 ? <EverySecStartingAt /> : null}
-        {select === 3 ? <SpecificSecond /> : null}
-        {select === 4 ? <EverySecBetweenSecAndSec /> : null}
+        {select === 1 ? <EveryHour /> : null}
+        {select === 2 ? <EveryHrStartingAt /> : null}
+        {select === 3 ? <SpecificHour /> : null}
+        {select === 4 ? <EveryHrBetweenHrAndHr /> : null}
       </Modal>
 
       <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
         <Radio value={1} valuePropName="checked">
-          Every second
+          Every hour
         </Radio>
 
         <Divider />
-        <Radio value={2}>Every second starting at</Radio>
+        <Radio value={2}>Every hour starting at</Radio>
 
         <Divider />
 
-        <Radio value={3}>Specific second</Radio>
+        <Radio value={3}>Specific hour</Radio>
         <Divider />
-        <Radio value={4}>Every second between second and second </Radio>
+        <Radio value={4}>Every hour between hour and hour </Radio>
         <Divider />
       </Radio.Group>
       <Divider />
@@ -80,4 +80,4 @@ const SecondsPeriodicidad = () => {
   );
 };
 
-export default SecondsPeriodicidad;
+export default HoursPeriodiocidad;
