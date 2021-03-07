@@ -1,10 +1,13 @@
-import { Select, Form } from "antd";
+import { Select, Form, Button } from "antd";
 import "antd/dist/antd.css";
 
-const Every = () => {
+const StartingAt = () => {
+  function handleChange(value) {
+    // console.log(`Selected: ${value}`);
+  }
   const children = [];
   // funtion for the 60 secs on select
-  for (let i = 1; i < 61; i++) {
+  for (let i = 0; i < 61; i++) {
     children.push(
       <Select.Option key={i} value={i}>
         {i} seconds
@@ -12,13 +15,9 @@ const Every = () => {
     );
   }
 
-  function handleChange(value) {
-    // console.log(`Selected: ${value}`);
-  }
-
   return (
     <>
-      <Form.Item name="every-x-seconds" label="Every:">
+      <Form.Item name="StartingAt" label="Starting at:">
         <Select
           size="small"
           // defaultValue="1"
@@ -32,4 +31,4 @@ const Every = () => {
   );
 };
 
-export default Every;
+export default StartingAt;

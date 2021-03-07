@@ -1,29 +1,28 @@
-import { Select, Form } from "antd";
+import { Select, Form, Button } from "antd";
 import "antd/dist/antd.css";
 
-const Every = () => {
+const SecondA = () => {
+  function handleChange(value) {
+    console.log(`Selected: ${value}`);
+  }
   const children = [];
   // funtion for the 60 secs on select
-  for (let i = 1; i < 61; i++) {
+  for (let i = 0; i < 61; i++) {
     children.push(
       <Select.Option key={i} value={i}>
-        {i} seconds
+        {i}
       </Select.Option>
     );
   }
 
-  function handleChange(value) {
-    // console.log(`Selected: ${value}`);
-  }
-
   return (
     <>
-      <Form.Item name="every-x-seconds" label="Every:">
+      <Form.Item name="secondA" label="second:">
         <Select
           size="small"
           // defaultValue="1"
           onChange={handleChange}
-          style={{ width: 120 }}
+          // style={{ width: 120 }}
         >
           {children}
         </Select>
@@ -32,4 +31,4 @@ const Every = () => {
   );
 };
 
-export default Every;
+export default SecondA;

@@ -1,22 +1,24 @@
 import { Form, Button } from "antd";
 import { Checkbox } from "antd";
 import React, { useState } from "react";
-let segundos = [];
+let minutos = [];
 
 const SpecificSecond = () => {
+  // const [minutos, setminutos] = useState([]);
   function onChange(checkedValues) {
-    segundos = checkedValues;
+    minutos = checkedValues;
+    // console.log("minutos = ", minutos);
   }
 
   const plainOptions = [];
-  let second = -1;
-  while (second < 59) {
-    second++;
-    const obj = { label: `${second}`, value: second };
+  let minute = -1;
+  while (minute < 59) {
+    minute++;
+    const obj = { label: `${minute}`, value: minute };
     plainOptions.push(obj);
   }
   const onFinish = (values) => {
-    console.log("segundos", segundos);
+    console.log("radio checked", minutos);
   };
 
   const onFinishFailed = (errorInfo) => {

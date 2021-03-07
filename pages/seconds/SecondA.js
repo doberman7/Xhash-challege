@@ -3,7 +3,7 @@ import "antd/dist/antd.css";
 
 const SecondA = () => {
   function handleChange(value) {
-    console.log(`Selected: ${value}`);
+    // console.log(`Selected: ${value}`);
   }
   const children = [];
   // funtion for the 60 secs on select
