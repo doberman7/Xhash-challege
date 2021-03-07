@@ -25,7 +25,7 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="/minutes/Minutes">
+          <Link href="/minutes/MinutesPeriodicidad">
             <a className={styles.card}>
               <h3>Minutes &rarr;</h3>
             </a>
