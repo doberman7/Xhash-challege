@@ -6,14 +6,23 @@ const StartingOn = () => {
     // console.log(`Selected: ${value}`);
   }
   const children = [];
+  const days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
   // funtion for the 60 secs on select
-  for (let i = 1; i < 30; i++) {
+  days.map((day) => {
     children.push(
-      <Select.Option key={i} value={i}>
-        {i}
+      <Select.Option key={day} value={day}>
+        {day}
       </Select.Option>
     );
-  }
+  });
 
   return (
     <>
@@ -22,12 +31,11 @@ const StartingOn = () => {
           size="small"
           // defaultValue="1"
           onChange={handleChange}
-          style={{ width: 50 }}
+          style={{ width: 115 }}
         >
           {children}
         </Select>
       </Form.Item>
-      of the month
     </>
   );
 };

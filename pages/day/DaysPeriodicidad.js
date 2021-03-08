@@ -2,10 +2,10 @@ import { Divider, Radio } from "antd";
 import styles from "./days.module.css";
 import "antd/dist/antd.css";
 import Link from "next/link";
-import EveryDayStartingOn from "./everyDayStartingOnThe/EveryDayStartingOn";
+import EveryDayStartingOnDay from "./everyDayStartingOnDay/EveryDayStartingOnDay";
+import EveryDayStartingOn from "./everyDayStartingOnMonth/EveryDayStartingOn";
 import SpecificDay from "./SpecificDay";
 import EveryDay from "./EveryDay";
-// import EveryHrBetweenHrAndHr from "./EveryHrBetweenHrAndHr";
 import { useState } from "react";
 import { Modal } from "antd";
 
@@ -49,9 +49,9 @@ const DaysPeriodiocidad = () => {
         onCancel={handleCancel}
       >
         {select === 1 ? <EveryDay /> : null}
-        {select === 2 ? <EveryDayStartingOn /> : null}
-        {select === 3 ? <SpecificDay /> : null}
-        {/* {select === 4 ? <EveryHrBetweenHrAndHr /> : null} */}
+        {select === 2 ? <EveryDayStartingOnDay /> : null}
+        {select === 3 ? <EveryDayStartingOn /> : null}
+        {select === 4 ? <SpecificDay /> : null}
       </Modal>
 
       <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
@@ -60,14 +60,14 @@ const DaysPeriodiocidad = () => {
         </Radio>
 
         <Divider />
-        <Radio value={2}>Every Day starting on</Radio>
+        <Radio value={2}>Every Day starting on Day</Radio>
+
+        <Divider />
+        <Radio value={3}>Every Day starting on Month</Radio>
 
         <Divider />
 
-        <Radio value={3}>Specific Day</Radio>
-        {/* <Divider />
-        <Radio value={4}>Every Day between Day and Day </Radio>
-        <Divider /> */}
+        <Radio value={4}>Specific Day</Radio>
       </Radio.Group>
       <Divider />
       {/* <br /> */}

@@ -1,9 +1,9 @@
 import "antd/dist/antd.css";
 import { Form, Button } from "antd";
 
-import HourA from "./HourA";
-import HourB from "./HourB";
-const EveryHrBetweenHrAndHr = () => {
+import Every from "./Every";
+import StartingOn from "./StartingOn";
+const EveryDayStartingOnDay = () => {
   const onFinish = (values) => {
     console.log("values", values);
   };
@@ -16,7 +16,6 @@ const EveryHrBetweenHrAndHr = () => {
   // }
   return (
     <>
-      <p>Every hour between </p>
       <Form
         // {...layout}
         name="basic"
@@ -33,7 +32,8 @@ const EveryHrBetweenHrAndHr = () => {
             alignItems: "center",
           }}
         >
-          <HourA /> <HourB />
+          <Every />
+          <StartingOn />
         </div>
 
         <div
@@ -54,4 +54,4 @@ const EveryHrBetweenHrAndHr = () => {
   );
 };
 
-export default EveryHrBetweenHrAndHr;
+export default EveryDayStartingOnDay;
