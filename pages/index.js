@@ -37,12 +37,11 @@ export default function Home() {
             </a>
           </Link>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Day &rarr;</h3>
-          </a>
+          <Link href="/day/DaysPeriodicidad">
+            <a className={styles.card}>
+              <h3>Day &rarr;</h3>
+            </a>
+          </Link>
         </div>
       </main>
 
