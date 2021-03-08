@@ -9,7 +9,7 @@ import EveryDay from "./EveryDay";
 import { useState } from "react";
 import { Modal } from "antd";
 
-const HoursPeriodiocidad = () => {
+const DaysPeriodiocidad = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [select, setSelect] = useState(null);
 
@@ -56,18 +56,18 @@ const HoursPeriodiocidad = () => {
 
       <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
         <Radio value={1} valuePropName="checked">
-          Every hour
+          Every Day
         </Radio>
 
         <Divider />
-        <Radio value={2}>Every hour starting at</Radio>
+        <Radio value={2}>Every Day starting at</Radio>
 
         <Divider />
 
-        <Radio value={3}>Specific hour</Radio>
-        <Divider />
-        <Radio value={4}>Every hour between hour and hour </Radio>
-        <Divider />
+        <Radio value={3}>Specific Day</Radio>
+        {/* <Divider />
+        <Radio value={4}>Every Day between Day and Day </Radio>
+        <Divider /> */}
       </Radio.Group>
       <Divider />
       {/* <br /> */}
@@ -80,4 +80,4 @@ const HoursPeriodiocidad = () => {
   );
 };
 
-export default HoursPeriodiocidad;
+export default DaysPeriodiocidad;

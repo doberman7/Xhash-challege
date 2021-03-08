@@ -4,10 +4,10 @@ import "antd/dist/antd.css";
 const Every = () => {
   const children = [];
   // funtion for the 60 secs on select
-  for (let i = 1; i < 61; i++) {
+  for (let i = 1; i < 30; i++) {
     children.push(
       <Select.Option key={i} value={i}>
-        {i} day(s) starting on
+        {i}
       </Select.Option>
     );
   }
