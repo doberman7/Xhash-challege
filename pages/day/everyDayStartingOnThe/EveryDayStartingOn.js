@@ -1,5 +1,5 @@
 import "antd/dist/antd.css";
-import { Select, Form, Button } from "antd";
+import { Form, Button } from "antd";
 
 import Every from "./Every";
 import StartingOn from "./StartingOn";

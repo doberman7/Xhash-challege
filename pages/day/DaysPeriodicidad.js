@@ -2,7 +2,7 @@ import { Divider, Radio } from "antd";
 import styles from "./days.module.css";
 import "antd/dist/antd.css";
 import Link from "next/link";
-import EveryDayStartingOn from "./EveryDayStartingOn";
+import EveryDayStartingOn from "./everyDayStartingOnThe/EveryDayStartingOn";
 import SpecificDay from "./SpecificDay";
 import EveryDay from "./EveryDay";
 // import EveryHrBetweenHrAndHr from "./EveryHrBetweenHrAndHr";
@@ -60,7 +60,7 @@ const DaysPeriodiocidad = () => {
         </Radio>
 
         <Divider />
-        <Radio value={2}>Every Day starting at</Radio>
+        <Radio value={2}>Every Day starting on</Radio>
 
         <Divider />
 

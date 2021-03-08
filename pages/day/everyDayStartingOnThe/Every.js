@@ -23,7 +23,7 @@ const Every = () => {
           size="small"
           // defaultValue="1"
           onChange={handleChange}
-          // style={{ width: 120 }}
+          style={{ width: 50 }}
         >
           {children}
         </Select>
