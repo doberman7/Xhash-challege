@@ -4,6 +4,7 @@ import "antd/dist/antd.css";
 import Link from "next/link";
 import EveryDayStartingOnDay from "./everyDayStartingOnDay/EveryDayStartingOnDay";
 import EveryDayStartingOn from "./everyDayStartingOnMonth/EveryDayStartingOn";
+import OnTheLast from "./OnTheLast/OnTheLast";
 import SpecificDay from "./SpecificDay";
 import EveryDay from "./EveryDay";
 import { useState } from "react";
@@ -52,6 +53,7 @@ const DaysPeriodiocidad = () => {
         {select === 2 ? <EveryDayStartingOnDay /> : null}
         {select === 3 ? <EveryDayStartingOn /> : null}
         {select === 4 ? <SpecificDay /> : null}
+        {select === 5 ? <OnTheLast /> : null}
       </Modal>
 
       <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
@@ -68,6 +70,9 @@ const DaysPeriodiocidad = () => {
         <Divider />
 
         <Radio value={4}>Specific Day</Radio>
+        <Divider />
+
+        <Radio value={5}>On The Last</Radio>
       </Radio.Group>
       <Divider />
       {/* <br /> */}
