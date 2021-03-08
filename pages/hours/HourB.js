@@ -7,7 +7,7 @@ const HourB = () => {
   }
   const children = [];
   // funtion for the 60 secs on select
-  for (let i = 0; i < 61; i++) {
+  for (let i = 0; i < 24; i++) {
     children.push(
       <Select.Option key={i} value={i}>
         {i}
@@ -22,7 +22,7 @@ const HourB = () => {
           size="small"
           // defaultValue="1"
           onChange={handleChange}
-          // style={{ width: 120 }}
+          style={{ width: 50 }}
         >
           {children}
         </Select>

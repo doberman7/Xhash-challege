@@ -9,7 +9,7 @@ const SpecificHour = () => {
 
   const plainOptions = [];
   let hour = -1;
-  while (hour < 17) {
+  while (hour < 24) {
     hour++;
     const obj = { label: `${hour}`, value: hour };
     plainOptions.push(obj);

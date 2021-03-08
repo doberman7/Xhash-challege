@@ -19,7 +19,6 @@ const EveryHour = () => {
         }}
       >
         <Form
-          // {...layout}
           name="basic"
           initialValues={{
             remember: true,
