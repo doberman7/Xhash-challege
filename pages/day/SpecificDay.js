@@ -8,8 +8,8 @@ const SpecificDay = () => {
   }
 
   const plainOptions = [];
-  let day = -1;
-  while (day < 17) {
+  let day = 0;
+  while (day < 31) {
     day++;
     const obj = { label: `${day}`, value: day };
     plainOptions.push(obj);
