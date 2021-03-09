@@ -1,6 +1,6 @@
 import { Form, Button, Radio, Divider } from "antd";
 import "antd/dist/antd.css";
-
+import OnTheLastXDayOfTheMonth from "./OnTheLastXDayOfTheMonth";
 const OnTheLastDayOfMonth = () => {
   let selected = null;
   const onChange = (e) => {
@@ -59,6 +59,11 @@ const OnTheLastDayOfMonth = () => {
                 initialValue="lastWeekendOfTheMonth"
               >
                 On the last weekend of the month
+              </Form.Item>
+            </Radio>
+            <Radio value={3}>
+              <Form.Item name="OnTheLastXDayOfTheMonth" label="on the last :">
+                <OnTheLastXDayOfTheMonth />
               </Form.Item>
             </Radio>
           </Radio.Group>
