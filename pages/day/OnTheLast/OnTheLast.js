@@ -1,23 +1,33 @@
 import { Form, Button, Radio, Divider } from "antd";
 import "antd/dist/antd.css";
-import OnTheLastXDayOfTheMonth from "./OnTheLastXDayOfTheMonth";
 const OnTheLastDayOfMonth = () => {
   let selected = null;
   const onChange = (e) => {
-    // console.log(e.target.value);
     selected = e.target.value;
   };
   const onFinish = (values) => {
-    console.log(
-      selected === 1 ? values.lastDayOfTheMonth : values.lastWeekendOfTheMonth
-    );
+    // console.log(values);
+
+    switch (selected) {
+      case 1:
+        console.log(values.lastDayOfTheMonth);
+        break;
+
+      case 2:
+        console.log(values.lastWeekendOfTheMonth);
+        break;
+
+      default:
+        null;
+        break;
+    }
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
   const parentRadio = {
-    width: "100%",
+    // width: "100%",
   };
 
   return (
@@ -59,11 +69,6 @@ const OnTheLastDayOfMonth = () => {
                 initialValue="lastWeekendOfTheMonth"
               >
                 On the last weekend of the month
-              </Form.Item>
-            </Radio>
-            <Radio value={3}>
-              <Form.Item name="OnTheLastXDayOfTheMonth" label="on the last :">
-                <OnTheLastXDayOfTheMonth />
               </Form.Item>
             </Radio>
           </Radio.Group>

@@ -7,6 +7,7 @@ import EveryDayStartingOn from "./everyDayStartingOnMonth/EveryDayStartingOn";
 import OnTheLast from "./OnTheLast/OnTheLast";
 import SpecificDay from "./SpecificDay";
 import EveryDay from "./EveryDay";
+import OnTheLastXDayOfTheMonth from "./OnTheLastXDayOfTheMonth";
 import { useState } from "react";
 import { Modal } from "antd";
 
@@ -54,6 +55,7 @@ const DaysPeriodiocidad = () => {
         {select === 3 ? <EveryDayStartingOn /> : null}
         {select === 4 ? <SpecificDay /> : null}
         {select === 5 ? <OnTheLast /> : null}
+        {select === 6 ? <OnTheLastXDayOfTheMonth /> : null}
       </Modal>
 
       <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
@@ -73,6 +75,9 @@ const DaysPeriodiocidad = () => {
         <Divider />
 
         <Radio value={5}>On The Last</Radio>
+        <Divider />
+
+        <Radio value={6}>OnTheLastXDayOfTheMonth</Radio>
       </Radio.Group>
       <Divider />
       {/* <br /> */}
