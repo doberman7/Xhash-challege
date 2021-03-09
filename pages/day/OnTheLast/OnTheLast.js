@@ -32,6 +32,7 @@ const OnTheLastDayOfMonth = () => {
 
   return (
     <>
+      <p>On the last</p>
       <div
         style={{
           display: "flex",
@@ -54,22 +55,20 @@ const OnTheLastDayOfMonth = () => {
             onChange={onChange}
           >
             <Radio value={1} valuePropName="checked">
+              Day of the month
               <Form.Item
                 name="lastDayOfTheMonth"
                 initialValue="lastDayOfTheMonth"
-              >
-                On the last day of the month
-              </Form.Item>
+              ></Form.Item>
             </Radio>
 
             <Divider />
             <Radio value={2}>
+              Weekend of the month
               <Form.Item
                 name="lastWeekendOfTheMonth"
                 initialValue="lastWeekendOfTheMonth"
-              >
-                On the last weekend of the month
-              </Form.Item>
+              ></Form.Item>
             </Radio>
           </Radio.Group>
           <Form.Item>
