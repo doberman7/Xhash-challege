@@ -8,6 +8,7 @@ import OnTheLast from "./OnTheLast/OnTheLast";
 import SpecificDay from "./SpecificDay/SpecificDay";
 import EveryDay from "./everyDay/EveryDay";
 import OnTheLastXDayOfTheMonth from "./OnTheLastXDayOfTheMonth/OnTheLastXDayOfTheMonth";
+import XDayBeforeTheEndOfTheMonth from "./XDayBeforeTheEndOfTheMonth/XDayBeforeTheEndOfTheMonth";
 
 import { useState } from "react";
 import { Modal } from "antd";
@@ -57,6 +58,7 @@ const DaysPeriodiocidad = () => {
         {select === 4 ? <SpecificDay /> : null}
         {select === 5 ? <OnTheLast /> : null}
         {select === 6 ? <OnTheLastXDayOfTheMonth /> : null}
+        {select === 7 ? <XDayBeforeTheEndOfTheMonth /> : null}
       </Modal>
 
       <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
@@ -77,8 +79,13 @@ const DaysPeriodiocidad = () => {
 
         <Radio value={5}>On The Last</Radio>
         <Divider />
+        <Radio value={6}>On The Last selected Day Of The Month</Radio>
+        <Divider />
 
-        <Radio value={6}>OnTheLastXDayOfTheMonth</Radio>
+        <Radio value={7}>
+          select Number of days before the end of the month
+        </Radio>
+        <Divider />
       </Radio.Group>
       <Divider />
       {/* <br /> */}
