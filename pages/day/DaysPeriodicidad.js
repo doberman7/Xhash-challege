@@ -5,9 +5,10 @@ import Link from "next/link";
 import EveryDayStartingOnDay from "./everyDayStartingOnDay/EveryDayStartingOnDay";
 import EveryDayStartingOn from "./everyDayStartingOnMonth/EveryDayStartingOn";
 import OnTheLast from "./OnTheLast/OnTheLast";
-import SpecificDay from "./SpecificDay";
+import SpecificDay from "./SpecificDay/SpecificDay";
 import EveryDay from "./everyDay/EveryDay";
-import OnTheLastXDayOfTheMonth from "./OnTheLastXDayOfTheMonth";
+import OnTheLastXDayOfTheMonth from "./OnTheLastXDayOfTheMonth/OnTheLastXDayOfTheMonth";
+
 import { useState } from "react";
 import { Modal } from "antd";
 
