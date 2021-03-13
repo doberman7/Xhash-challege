@@ -91,7 +91,7 @@ const SpecificMonth = () => {
         <Field type="radio" name="picked" value="Tree" />
         {/* <div id="checkbox-group">Checked</div> */}
         {/* <div role="group" aria-labelledby="checkbox-group"> */} Specific
-        month choose one or many
+        month (choose one or many)
         <br />
         <>{monthsNames}</>
         {/* </div> */}
