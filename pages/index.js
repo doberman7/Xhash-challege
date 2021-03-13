@@ -42,6 +42,12 @@ export default function Home() {
               <h3>Day &rarr;</h3>
             </a>
           </Link>
+
+          <Link href="/month/MonthPeriodicidad">
+            <a className={styles.card}>
+              <h3>Month &rarr;</h3>
+            </a>
+          </Link>
         </div>
       </main>
 
