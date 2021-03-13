@@ -15,7 +15,7 @@ const NearestWeekday = () => {
   for (let i = 1; i < 30; i++) {
     children.push(
       <Select.Option key={i} value={i}>
-        {i}
+        {i}th
       </Select.Option>
     );
   }
@@ -43,7 +43,7 @@ const NearestWeekday = () => {
             size="small"
             // defaultValue="1"
             onChange={handleChange}
-            style={{ width: 50 }}
+            style={{ width: 70 }}
           >
             {children}
           </Select>

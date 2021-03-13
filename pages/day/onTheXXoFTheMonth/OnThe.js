@@ -24,7 +24,7 @@ const OnThe = () => {
           size="small"
           // defaultValue="1"
           onChange={handleChange}
-          style={{ width: 50 }}
+          style={{ width: 60 }}
         >
           {children}
         </Select>
