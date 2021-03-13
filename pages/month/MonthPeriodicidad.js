@@ -1,13 +1,15 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 import { Divider } from "antd";
-
+import styles from "./months.module.css";
+import Link from "next/link";
+import "antd/dist/antd.css";
 const EveryMonth = () => {
   return (
     <>
       <label>
         <Field type="radio" name="picked" value="One" />
-        EveryMonth
+        &nbsp;EveryMonth
       </label>
     </>
   );
@@ -48,7 +50,7 @@ const EveryXMonth = () => {
     <>
       <label>
         <Field type="radio" name="picked" value="Two" />
-        every &nbsp;
+        &nbsp;Every &nbsp;
         <Field as="select" name="month(s)">
           {months}
         </Field>
@@ -90,7 +92,7 @@ const SpecificMonth = () => {
         {/* <div id="checkbox-group">Checked</div> */}
         {/* <div role="group" aria-labelledby="checkbox-group"> */} Specific
         month choose one or many
-        <Divider />
+        <br />
         <>{monthsNames}</>
         {/* </div> */}
       </label>
@@ -101,35 +103,54 @@ const SpecificMonth = () => {
 const EveryMonthBetween = () => <p>EveryMonthBetween</p>;
 
 const MonthPeriodicidad = () => (
-  <div>
-    <h1>Sign Up</h1>
-    <Formik
-      initialValues={{
-        picked: "",
-      }}
-      onSubmit={async (values) => {
-        await new Promise((r) => setTimeout(r, 500));
-        alert(JSON.stringify(values, null, 2));
-      }}
-    >
-      {({ values }) => (
-        <Form>
-          {/* <div id="my-radio-group">Picked</div> */}
-          <div role="group" aria-labelledby="my-radio-group">
-            <EveryMonth />
-            <Divider />
-            <EveryXMonth />
-            <Divider />
-            <SpecificMonth />
+  <>
+    {" "}
+    <div>
+      <h1>Month</h1>
+      <Formik
+        initialValues={{
+          picked: "",
+        }}
+        onSubmit={async (values) => {
+          await new Promise((r) => setTimeout(r, 500));
+          alert(JSON.stringify(values, null, 2));
+        }}
+      >
+        {({ values }) => (
+          <Form>
+            {/* <div id="my-radio-group">Picked</div> */}
+            <div role="group" aria-labelledby="my-radio-group">
+              <ol>
+                <li>
+                  {" "}
+                  <EveryMonth />
+                </li>
+                <li>
+                  <EveryXMonth />
+                </li>
+                <li>
+                  {" "}
+                  <SpecificMonth />
+                </li>
 
-            <div>Picked: {values.picked}</div>
-          </div>
+                <Divider />
+              </ol>
 
-          <button type="submit">Submit</button>
-        </Form>
-      )}
-    </Formik>
-  </div>
+              <div>Picked: {values.picked}</div>
+            </div>
+
+            <button type="submit">Submit</button>
+          </Form>
+        )}
+      </Formik>
+    </div>
+    <br />
+    <div className={styles.backToHome}>
+      <Link href="/">
+        <a>← Back to home</a>
+      </Link>
+    </div>
+  </>
 );
 
 export default MonthPeriodicidad;
