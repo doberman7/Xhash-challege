@@ -6,7 +6,7 @@ const EveryMonth = () => {
   return (
     <>
       <label>
-        <Field type="radio" name="picked" value="every-month" />
+        <Field type="radio" name="picked" value="One" />
         EveryMonth
       </label>
     </>
@@ -37,10 +37,10 @@ const EveryXMonth = () => {
     );
   }
   //enlistar meses
-  mesesLista.map((day) => {
+  mesesLista.map((mes) => {
     monthsNames.push(
-      <option key={day} value={day}>
-        {day}
+      <option key={mes} value={mes}>
+        {mes}
       </option>
     );
   });
@@ -61,15 +61,38 @@ const EveryXMonth = () => {
   );
 };
 const SpecificMonth = () => {
+  const monthsNames = [];
+  const mesesLista = [
+    "January",
+    "February",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  mesesLista.map((mes) => {
+    monthsNames.push(
+      <label>
+        <Field type="checkbox" name="checked" value={mes} key={mes} />
+        {mes}
+      </label>
+    );
+  });
   return (
     <>
       <label>
         <Field type="radio" name="picked" value="Tree" />
-        <Field as="select" name="color">
-          <option value="red">Red</option>
-          <option value="green">Green</option>
-          <option value="blue">Blue</option>
-        </Field>
+        {/* <div id="checkbox-group">Checked</div> */}
+        {/* <div role="group" aria-labelledby="checkbox-group"> */} Specific
+        month choose one or many
+        <Divider />
+        <>{monthsNames}</>
+        {/* </div> */}
       </label>
     </>
   );
