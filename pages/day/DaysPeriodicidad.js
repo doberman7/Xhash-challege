@@ -4,11 +4,13 @@ import "antd/dist/antd.css";
 import Link from "next/link";
 import EveryDayStartingOnDay from "./everyDayStartingOnDay/EveryDayStartingOnDay";
 import EveryDayStartingOn from "./everyDayStartingOnMonth/EveryDayStartingOn";
-import OnTheLast from "./OnTheLast/OnTheLast";
-import SpecificDay from "./SpecificDay/SpecificDay";
+import OnTheLast from "./onTheLast/OnTheLast";
+import SpecificDay from "./specificDay/SpecificDay";
 import EveryDay from "./everyDay/EveryDay";
-import OnTheLastXDayOfTheMonth from "./OnTheLastXDayOfTheMonth/OnTheLastXDayOfTheMonth";
-import XDayBeforeTheEndOfTheMonth from "./XDayBeforeTheEndOfTheMonth/XDayBeforeTheEndOfTheMonth";
+import OnTheLastXDayOfTheMonth from "./onTheLastXDayOfTheMonth/OnTheLastXDayOfTheMonth";
+import XDayBeforeTheEndOfTheMonth from "./xDayBeforeTheEndOfTheMonth/XDayBeforeTheEndOfTheMonth";
+import NearestWeekday from "./nearestWeekday/NearestWeekday";
+import OnTheXXoFTheMonth from "./onTheXXoFTheMonth/OnTheXXoFTheMonth";
 
 import { useState } from "react";
 import { Modal } from "antd";
@@ -59,6 +61,8 @@ const DaysPeriodiocidad = () => {
         {select === 5 ? <OnTheLast /> : null}
         {select === 6 ? <OnTheLastXDayOfTheMonth /> : null}
         {select === 7 ? <XDayBeforeTheEndOfTheMonth /> : null}
+        {select === 8 ? <NearestWeekday /> : null}
+        {select === 9 ? <OnTheXXoFTheMonth /> : null}
       </Modal>
 
       <Radio.Group name="radiogroup" style={parentRadio} onChange={onChange}>
@@ -67,24 +71,26 @@ const DaysPeriodiocidad = () => {
         </Radio>
 
         <Divider />
-        <Radio value={2}>Every Day starting on Day</Radio>
+        <Radio value={2}>Every Day starting on Day...</Radio>
 
         <Divider />
-        <Radio value={3}>Every Day starting on Month</Radio>
+        <Radio value={3}>Every Day starting on Month..</Radio>
 
         <Divider />
 
         <Radio value={4}>Specific Day</Radio>
         <Divider />
-
-        <Radio value={5}>On The Last</Radio>
+        <Radio value={5}>On The Last...</Radio>
         <Divider />
         <Radio value={6}>On The Last selected Day Of The Month</Radio>
         <Divider />
-
         <Radio value={7}>
           select Number of days before the end of the month
         </Radio>
+        <Divider />
+        <Radio value={8}>Nearest Weekday...</Radio>
+        <Divider />
+        <Radio value={9}>On The selected number / day of the month</Radio>
         <Divider />
       </Radio.Group>
       <Divider />
