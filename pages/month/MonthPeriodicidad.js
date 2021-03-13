@@ -93,15 +93,53 @@ const SpecificMonth = () => {
         {/* <div role="group" aria-labelledby="checkbox-group"> */} Specific
         month (choose one or many)
         <br />
-        <>{monthsNames}</>
+        {monthsNames}
         {/* </div> */}
       </label>
     </>
   );
 };
 
-const EveryMonthBetween = () => <p>EveryMonthBetween</p>;
+const EveryMonthBetween = () => {
+  const monthsNames = [];
+  const mesesLista = [
+    "January",
+    "February",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
+  //enlistar meses
+  mesesLista.map((mes) => {
+    monthsNames.push(
+      <option key={mes} value={mes}>
+        {mes}
+      </option>
+    );
+  });
+  return (
+    <>
+      <label>
+        <Field type="radio" name="picked" value="Four" />
+        &nbsp;Every month between &nbsp;
+        <Field as="select" name="mont-name-a">
+          {monthsNames}
+        </Field>
+        &nbsp;and month &nbsp;
+        <Field as="select" name="mont-name-b">
+          {monthsNames}
+        </Field>
+      </label>
+    </>
+  );
+};
 const MonthPeriodicidad = () => (
   <>
     {" "}
@@ -131,6 +169,10 @@ const MonthPeriodicidad = () => (
                 <li>
                   {" "}
                   <SpecificMonth />
+                </li>
+                <li>
+                  {" "}
+                  <EveryMonthBetween />
                 </li>
 
                 <Divider />
