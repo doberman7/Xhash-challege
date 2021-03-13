@@ -30,7 +30,7 @@ const StartingOn = () => {
           {children}
         </Select>
       </Form.Item>
-      of the month
+      &nbsp; of the month
     </>
   );
 };

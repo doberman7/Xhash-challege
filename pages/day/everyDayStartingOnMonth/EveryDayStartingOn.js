@@ -33,6 +33,7 @@ const EveryDayStartingOn = () => {
           }}
         >
           <Every />
+          &nbsp;
           <StartingOn />
         </div>
 
