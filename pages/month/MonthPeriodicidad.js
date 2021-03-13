@@ -13,11 +13,49 @@ const EveryMonth = () => {
   );
 };
 const EveryXMonth = () => {
+  const months = [];
+  const monthsNames = [];
+  const mesesLista = [
+    "January",
+    "February",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  //numerar meses 1->12
+  for (let i = 1; i < 13; i++) {
+    months.push(
+      <option key={i} value={i}>
+        {i}
+      </option>
+    );
+  }
+  //enlistar meses
+  mesesLista.map((day) => {
+    monthsNames.push(
+      <option key={day} value={day}>
+        {day}
+      </option>
+    );
+  });
   return (
     <>
       <label>
-        <Field type="radio" name="picked" value="every-month-stating-at" />
-        EveryXMonths starting at month X
+        <Field type="radio" name="picked" value="Two" />
+        every &nbsp;
+        <Field as="select" name="month(s)">
+          {months}
+        </Field>
+        &nbsp;month(s) starting at
+        <Field as="select" name="monthsNames(s)">
+          {monthsNames}
+        </Field>
       </label>
     </>
   );
