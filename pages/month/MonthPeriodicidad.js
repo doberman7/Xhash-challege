@@ -134,10 +134,12 @@ const EveryMonthBetween = () => {
         <Field type="radio" name="picked" value="Four" />
         &nbsp;Every month between &nbsp;
         <Field as="select" name="montNameA">
+          <option key="0" value="0"></option>
           {monthsNames}
         </Field>
         &nbsp;and month &nbsp;
         <Field as="select" name="montNameB">
+          <option key="0" value="0"></option>
           {monthsNames}
         </Field>
       </label>
