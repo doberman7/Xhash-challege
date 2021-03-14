@@ -64,6 +64,7 @@ const EveryXMonth = () => {
     </>
   );
 };
+//3
 const SpecificMonth = () => {
   const monthsNames = [];
   const mesesLista = [
@@ -126,16 +127,17 @@ const EveryMonthBetween = () => {
       </option>
     );
   });
+
   return (
     <>
       <label>
         <Field type="radio" name="picked" value="Four" />
         &nbsp;Every month between &nbsp;
-        <Field as="select" name="mont-name-a">
+        <Field as="select" name="montNameA">
           {monthsNames}
         </Field>
         &nbsp;and month &nbsp;
-        <Field as="select" name="mont-name-b">
+        <Field as="select" name="montNameB">
           {monthsNames}
         </Field>
       </label>
@@ -154,21 +156,24 @@ const MonthPeriodicidad = () => (
         onSubmit={async (values) => {
           // await new Promise((r) => setTimeout(r, 500));
           // console.log(JSON.stringify(values, null, 2));
+
+          console.log(JSON.stringify(values.picked, null, 2));
+          //
           switch (values.picked) {
             case "One":
               console.log("every-month");
               break;
             case "Two":
-              console.log("picked:", values.picked);
               console.log("every", values.every);
               console.log("month(s) starting at", values.monthStartingAt);
-
               break;
-            case "Three":
-              console.log(JSON.stringify(values, null, 2));
+            case "Tree":
+              console.log("checked", values.checked);
               break;
             case "Four":
-              console.log("every-month");
+              console.log("Every month between", values.montNameA);
+              console.log("and month", values.montNameB);
+
               break;
 
             default:
