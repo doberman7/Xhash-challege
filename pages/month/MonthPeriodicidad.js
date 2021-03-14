@@ -57,7 +57,7 @@ const EveryXMonth = () => {
           {months}
         </Field>
         &nbsp;month(s) starting at
-        <Field as="select" name="month(s)-starting-at">
+        <Field as="select" name="monthStartingAt">
           {monthsNames}
         </Field>
       </label>
@@ -153,12 +153,16 @@ const MonthPeriodicidad = () => (
         }}
         onSubmit={async (values) => {
           // await new Promise((r) => setTimeout(r, 500));
+          // console.log(JSON.stringify(values, null, 2));
           switch (values.picked) {
             case "One":
               console.log("every-month");
               break;
             case "Two":
-              console.log(JSON.stringify(values, null, 2));
+              console.log("picked:", values.picked);
+              console.log("every", values.every);
+              console.log("month(s) starting at", values.monthStartingAt);
+
               break;
             case "Three":
               console.log(JSON.stringify(values, null, 2));
