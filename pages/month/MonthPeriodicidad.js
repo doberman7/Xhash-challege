@@ -18,6 +18,7 @@ const EveryXMonth = () => {
   const months = [];
   const monthsNames = [];
   const mesesLista = [
+    null,
     "January",
     "February",
     "April",
@@ -51,11 +52,12 @@ const EveryXMonth = () => {
       <label>
         <Field type="radio" name="picked" value="Two" />
         &nbsp;Every &nbsp;
-        <Field as="select" name="month(s)">
+        <Field as="select" name="every">
+          <option key="0" value="0"></option>
           {months}
         </Field>
         &nbsp;month(s) starting at
-        <Field as="select" name="monthsNames(s)">
+        <Field as="select" name="month(s)-starting-at">
           {monthsNames}
         </Field>
       </label>
@@ -150,8 +152,24 @@ const MonthPeriodicidad = () => (
           picked: "",
         }}
         onSubmit={async (values) => {
-          await new Promise((r) => setTimeout(r, 500));
-          alert(JSON.stringify(values, null, 2));
+          // await new Promise((r) => setTimeout(r, 500));
+          switch (values.picked) {
+            case "One":
+              console.log("every-month");
+              break;
+            case "Two":
+              console.log(JSON.stringify(values, null, 2));
+              break;
+            case "Three":
+              console.log(JSON.stringify(values, null, 2));
+              break;
+            case "Four":
+              console.log("every-month");
+              break;
+
+            default:
+              break;
+          }
         }}
       >
         {({ values }) => (
