@@ -1,4 +1,4 @@
-import { Formik, Field, Form } from "formik";
+import { Field } from "formik";
 
 const SpecificMonth = () => {
   const monthsNames = [];
@@ -17,7 +17,7 @@ const SpecificMonth = () => {
   ];
   mesesLista.map((mes) => {
     monthsNames.push(
-      <label>
+      <label key={mes}>
         <Field type="checkbox" name="checked" value={mes} key={mes} />
         {mes}
       </label>
